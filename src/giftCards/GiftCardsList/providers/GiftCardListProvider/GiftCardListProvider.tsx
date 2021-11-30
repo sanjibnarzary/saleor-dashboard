@@ -94,7 +94,7 @@ export const GiftCardsListProvider: React.FC<GiftCardsListProviderProps> = ({
   const handleGiftCardListError = (error: ApolloError) => {
     const { message } = error?.graphQLErrors[0];
 
-    if (message) {
+    if (!!message) {
       notify({
         status: "error",
         text: message
